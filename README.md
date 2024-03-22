@@ -3,11 +3,6 @@
 A big red button that, when pressed, documents the current time and date and displays it on a local network website.
 
 Different files:
-- test data and time
-	- get unix time
-	- convert unix time to local time with js on the client
-- test screen output
-	- turn on and off screen
 - final script
 	- When button pressed
 		- Add current data and time to html page

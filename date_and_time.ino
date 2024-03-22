@@ -4,8 +4,20 @@
 const char* ssid = "ssid";
 const char* pass = "pass";
 
-const char* NTP_SERVER = "ch.pool.ntp.org";
-const char* TZ_INFO    = "PST8PDT";  // enter your time zone (https://remotemonitoringsystems.ca/time-zone-abbreviations.php)
+const char* ntpServer = "ch.pool.ntp.org";
+const char* ntpServer2 = "pool.ntp.org";
+
+unsigned long epochTime;
+
+unsigned long getTime() {
+  time_t now;
+  struct tm timeinfo;
+  if(!getLocalTime(&timeinfo)){
+    return(0);
+  }
+  time(&now);
+  return now;
+}
 
 void setup(){
 	Serial.begin(115200);
@@ -22,12 +34,12 @@ void setup(){
   Serial.println("");
   Serial.println("WiFi connected. ");
 
-	configTime(0, 0, NTP_SERVER);
-  // See https://github.com/nayarsystems/posix_tz_db/blob/master/zones.csv for Timezone codes for your region
-  setenv("PST8PDT,M3.2.0,M11.1.0", TZ_INFO, 1);
-
+	configTime(0, 0, ntpServer);
 }
 
 void loop(){
-
+  epochTime = getTime();
+  Serial.print("Epoch Time: ");
+  Serial.println(epochTime);
+  delay(1000);
 }

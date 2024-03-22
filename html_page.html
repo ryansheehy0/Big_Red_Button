@@ -25,15 +25,38 @@
 				<tr>
 					<th>Day of week:</th>
 					<th>Date:</th>
-					<th>Unix time:</th>
+					<th style="display: none;">Unix time:</th>
 					<th>Local time:</th>
 				</tr>
 				<tr>
-					<td>Tuesday</td>
-					<td>March 19</td>
-					<td>1711067929</td>
-					<td></td>
+					<td class="day"></td>
+					<td class="date"></td>
+					<td class="unix" style="display: none;">1711130998</td>
+					<td class="local"></td>
 				</tr>
 			</table>
+			<script>
+				const unixTimes = document.querySelectorAll(".unix")
+				const dayOfWeeks = document.querySelectorAll(".day")
+				const dates = document.querySelectorAll(".date")
+				const localTimes = document.querySelectorAll(".local")
+
+				for (const [i, unixTime] of unixTimes.entries()) {
+					const date = new Date(parseInt(unixTime.innerHTML) * 1000)
+					console.log(date.toLocaleString())
+
+					const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+					dayOfWeeks[i].innerHTML = daysOfWeek[date.getDay()]
+
+				 	const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+					const monthName = months[date.getMonth()]
+					dates[i].innerHTML = `${monthName} ${date.getDate()}`
+
+					const hours = date.getHours()
+					const amOrPm = hours >= 12 ? "PM" : "AM"
+					const hours12 = hours % 12 || 12
+					localTimes[i].innerHTML = `${hours12}:${String(date.getMinutes()).padStart(2, "0")} ${amOrPm}`
+				}
+			</script>
     </body>
 </html>
