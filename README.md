@@ -4,6 +4,8 @@ A big red button that, when pressed, documents the current time and date and dis
 
 Different files:
 - test data and time
+	- get unix time
+	- convert unix time to local time with js on the client
 - test screen output
 	- turn on and off screen
 - final script
