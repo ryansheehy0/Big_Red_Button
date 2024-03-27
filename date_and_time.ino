@@ -1,5 +1,5 @@
 #include <WiFi.h>
-#include <time.h>
+#include "time.h"
 
 const char* ssid = "ssid";
 const char* pass = "pass";
@@ -34,7 +34,7 @@ void setup(){
   Serial.println("");
   Serial.println("WiFi connected. ");
 
-	configTime(0, 0, ntpServer);
+	configTime(0, 0, ntpServer2);
 }
 
 void loop(){

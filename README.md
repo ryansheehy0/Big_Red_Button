@@ -2,6 +2,16 @@
 
 A big red button that, when pressed, documents the current time and date and displays it on a local network website.
 
+Done:
+- Hello world
+- Button pressed
+
+Need to do:
+- Date and time
+- Web server
+- Screen output
+- Final script
+
 Different files:
 - final script
 	- When button pressed
@@ -12,3 +22,14 @@ Different files:
 - 1st get working with wired power
 - 2nd get working with usb power bank
 	- Need 555 timer keep awake circuit
+
+## Uploading to [ESP 32](https://www.amazon.com/gp/product/B0718T232Z/ref=ppx_yo_dt_b_asin_title_o00_s01?ie=UTF8&psc=1)
+1. Download Arduino IDE
+2. File -> Preferences -> Additional boards manager URLs: `https://dl.espressif.com/dl/package_esp32_index.json`
+3. Boards Manager -> esp32 Install
+4. In terminal
+```
+sudo adduser <username> dialout
+sudo chmod a+rw /dev/ttyUSB0
+```
+5. Select `NodeMCU-32S` board
