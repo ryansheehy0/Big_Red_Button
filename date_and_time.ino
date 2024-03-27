@@ -4,8 +4,8 @@
 const char* ssid = "ssid";
 const char* pass = "pass";
 
-const char* ntpServer = "ch.pool.ntp.org";
-const char* ntpServer2 = "pool.ntp.org";
+const char* ntpServer = "pool.ntp.org";
+const char* ntpServer2 = "ch.pool.ntp.org";
 
 unsigned long epochTime;
 
@@ -34,7 +34,7 @@ void setup(){
   Serial.println("");
   Serial.println("WiFi connected. ");
 
-	configTime(0, 0, ntpServer2);
+	configTime(0, 0, ntpServer);
 }
 
 void loop(){

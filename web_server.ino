@@ -1,12 +1,11 @@
 #include <WiFi.h>
-#include <WebServer.h>
 
 const char* ssid = "ssid";
 const char* pass = "pass";
 
-const char* htmlPage = "<html><head><meta charset='UTF-8' /><meta name='viewport' content='width=device-width, initial-scale=1.0' /></head><body><div>Test</div></body></html>"
+const char* htmlPage = "<!DOCTYPE html><html><head><meta charset='UTF-8' /><meta name='viewport' content='width=device-width, initial-scale=1.0' /></head><body><div>Test</div></body></html>";
 
-WebServer server(80);
+WiFiServer server(80);
 
 void setup(){
 	Serial.begin(115200);

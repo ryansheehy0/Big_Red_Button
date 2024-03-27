@@ -5,10 +5,10 @@ A big red button that, when pressed, documents the current time and date and dis
 Done:
 - Hello world
 - Button pressed
-
-Need to do:
 - Date and time
 - Web server
+
+Need to do:
 - Screen output
 - Final script
 
