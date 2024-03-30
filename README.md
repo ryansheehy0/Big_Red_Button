@@ -7,9 +7,9 @@ Done:
 - Button pressed
 - Date and time
 - Web server
+- Screen output
 
 Need to do:
-- Screen output
 - Final script
 
 Different files:

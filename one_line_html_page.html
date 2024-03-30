@@ -1,0 +1,9 @@
+<!DOCTYPE html><html><head><title>Time Tracking Big Red Button</title><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><style>table, td, th {border: 2px solid #FFF; text-align: left; color: white; font-family: "Courier New", Courier, monospace;}table {border-collapse: collapse; width: 100%;} th, td {padding: 15px;}</style></head><body style="background-color: black;"><table><tr><th>Day of week:</th><th>Date:</th><th style="display: none;">Unix time:</th><th>Local time:</th></tr>
+
+<tr class="row"><td class="day"></td><td class="date"></td><td class="unix" style="display: none;">
+
+1711130998
+
+</td><td class="local"></td></tr>
+
+</table><script>const rows = document.querySelectorAll(".row");const unixTimes = document.querySelectorAll(".unix");const dayOfWeeks = document.querySelectorAll(".day");const dates = document.querySelectorAll(".date");const localTimes = document.querySelectorAll(".local");for (const [i, unixTime] of unixTimes.entries()) {if(Number.isNaN(parseInt(unixTime.innerHTML))){rows[i].style.display = "none";continue;}rows[i].style.display = "";const date = new Date(parseInt(unixTime.innerHTML) * 1000);const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];dayOfWeeks[i].innerHTML = daysOfWeek[date.getDay()];const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];const monthName = months[date.getMonth()];dates[i].innerHTML = `${monthName} ${date.getDate()}`;const hours = date.getHours();const amOrPm = hours >= 12 ? "PM" : "AM";const hours12 = hours % 12 || 12;localTimes[i].innerHTML = `${hours12}:${String(date.getMinutes()).padStart(2, "0")} ${amOrPm}`;}</script></body></html>
