@@ -11,7 +11,7 @@ const char* ssid = "ssid";
 const char* pass = "pass";
 const char* ntpServer = "pool.ntp.org";
 const int btnPin = 12;
-const int maxRows = 10;
+const int maxRows = 15;
 
 // HTML variables
 const char* htmlPageStart = "<!DOCTYPE html><html><head><title>Time Tracking Big Red Button</title><meta charset='UTF-8' /><meta name='viewport' content='width=device-width, initial-scale=1.0' /><style>table, td, th {border: 2px solid #FFF; text-align: left; color: white; font-family: 'Courier New', Courier, monospace;}table {border-collapse: collapse; width: 100%;} th, td {padding: 15px;}</style></head><body style='background-color: black;'><table><tr><th>Day of week:</th><th>Date:</th><th style='display: none;'>Unix time:</th><th>Local time:</th></tr>";
@@ -53,7 +53,7 @@ void setup(){
   display.clearDisplay();
   display.setTextSize(1);
   display.setTextColor(WHITE);
-  display.setCursor(0, 25);
+  display.setCursor(25, 25);
   display.println(ipAddress);
   display.display();
 	delay(2000);
@@ -63,7 +63,7 @@ void setup(){
 
 void loop(){
 	if(digitalRead(btnPin) == LOW){
-    display.setCursor(0, 25);
+    display.setCursor(25, 25);
     display.println(ipAddress);
 		display.display();
 		currentTime = getTime();
@@ -92,10 +92,10 @@ void loop(){
 						client.print(htmlPageStart);
 						int index = timeIndex - 1;
 						for(int i = 0; i < maxRows; i++){
-							if(index == 10){
+							if(index == maxRows){
 								index = 0;
 							}else if(index == -1){
-								index = 9;
+								index = maxRows - 1;
 							}
 							client.print(rowStart);
 							client.print(unixTimes[index]);
