@@ -5,6 +5,9 @@ When the button is pressed, the screen displays the IP address for 1 second to c
 
 <img src="./images/final_product.jpeg" alt="Image of final product" style="max-width:50%;height:auto;">
 
+
+<img src="./images/website_screenshot.png" alt="Website screenshot" style="max-width:50%;height:auto;">
+
 ## Instructions
 1. Wire everything up
 	- The final product should be soldered, but it would be best to test first on a bread board.
@@ -17,18 +20,18 @@ When the button is pressed, the screen displays the IP address for 1 second to c
 			- Pin 1(3.3V) connects to VCC pin of the screen.
 			- Pin 36(GIOP22) connects to SCL pin of the screen.
 			- Pin 33(GIOP21) connects to SDA pin of the screen.
-			- <img src="./images/screen_soldered.jpeg" alt="Final screen soldering" style="max-width:50%;height:auto;">
+			- <img src="./images/screen_soldered.jpeg" alt="Final screen soldering" style="max-width:40%;height:auto;">
 	- For best results, remove the enamel from the copper wires using a utility knife.
-		- <img src="./images/enamel_removed.jpeg" alt="Removed enamel" style="max-width:50%;height:auto;">
+		- <img src="./images/enamel_removed.jpeg" alt="Removed enamel" style="max-width:40%;height:auto;">
 	- Fold up the ends of the wiring going into the button to ensure a better fit.
-		- <img src="./images/folded_up_ends.jpeg" alt="Folded up wiring ends" style="max-width:50%;height:auto;">
-		- <img src="./images/wire_in_button_1.jpeg" alt="Wire in button 1" style="max-width:40%;height:auto;display:inline-block"> <img src="./images/wire_in_button_2.jpeg" alt="Wire in button 2" style="max-width:40%;height:auto;">
+		- <img src="./images/folded_up_ends.jpeg" alt="Folded up wiring ends" style="max-width:40%;height:auto;">
+		- <img src="./images/wire_in_button_1.jpeg" alt="Wire in button 1" style="max-width:20%;height:auto;display:inline-block"> <img src="./images/wire_in_button_2.jpeg" alt="Wire in button 2" style="max-width:20%;height:auto;">
 1. Upload the [final script](./final_script.ino) and test
 	- Replace the `ssid` and `pass` variables with your Wi-Fi information.
 1. Mount in case
 	- There are very tight tolerances, for the height, to get the case to close properly.
 		- Sand down the bottom of the top half of the big red button to allow it to fit into the case.
-			- <img src="./images/bottom_of_big_red_button.png" alt="Bottom of the top part of the big red button" style="max-width:30%;height:auto;">
+			- <img src="./images/bottom_of_big_red_button.png" alt="Bottom of the top part of the big red button" style="max-width:20%;height:auto;">
 		- Make sure the wires soldered on the ESP 32 don't add additional height.
 	- Remove the front and back ports on the bottom half of the big red button.
 	- It is recommended to use a piece of foam to make sure everything fits snugly.
