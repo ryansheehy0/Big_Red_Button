@@ -3,7 +3,7 @@ A big red button that, when pressed, documents the current time and date and dis
 
 When the button is pressed, the screen displays the IP address for 1 second to confirm the press. Going to that IP address, on your browser, displays the last 15 times the button was pressed. This information is reset when the power cuts out.
 
-<img src="./images/final_product.jpeg" alt="Image of final product" style="max-width:50%;height:auto;">
+<img src="./images/final_product.jpeg" alt="Image of final product" width="50%">
 
 
 <img src="./images/website_screenshot.png" alt="Website screenshot" style="max-width:50%;height:auto;">
